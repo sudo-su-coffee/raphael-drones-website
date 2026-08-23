@@ -85,3 +85,9 @@
 - [x] Add verified social-media redirects, beginning with LinkedIn and other supplied/confirmed profiles.
 - [x] Keep all browsing simple: list, filter/category, and optional in-page expansion rather than separate detail views.
 - [x] Verify all routes on desktop/mobile and save a new checkpoint.
+
+## RPTO training visual
+
+- [x] Generate a realistic training visual showing practical drone pilot learning and field readiness.
+- [x] Integrate the visual into the RPTO section without reusing it elsewhere.
+- [x] Verify crop, contrast, accessibility text, and mobile layout before checkpointing.

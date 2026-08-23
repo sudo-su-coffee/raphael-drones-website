@@ -224,3 +224,11 @@
 .archive-footer-links a { display:flex; align-items:center; gap:.4rem; color:#F4EFE7; font-size:11px; font-weight:800; letter-spacing:.1em; text-decoration:none; text-transform:uppercase; }
 .archive-footer-links a:hover { color:#D18A63; }
 @media (max-width:760px) { .archive-topline { padding:.55rem 1rem; font-size:8px; } .archive-topline span:last-child { display:none; } .archive-nav { min-height:70px; gap:1rem; padding-left:1rem; padding-right:1rem; } .archive-brand img { width:68px; } .archive-nav nav { gap:1rem; } .archive-nav nav a { font-size:9px; letter-spacing:.06em; } .archive-social { display:none; } .archive-hero { padding:4.5rem 0 4rem; } .archive-hero-grid { grid-template-columns:1fr; gap:2.5rem; } .back-link { margin-bottom:2.5rem; } .archive-intro { max-width:420px; } .archive-intro p { font-size:16px; } .archive-list-section, .journal-list-section { padding:3.5rem 0 5rem; } .archive-toolbar, .archive-empty, .journal-footer-note, .archive-footer-inner { align-items:flex-start; flex-direction:column; } .filter-wrap { justify-content:flex-start; } .timeline-item { grid-template-columns:54px 12px minmax(0,1fr); gap:.75rem; } .timeline-content h2 { font-size:1.8rem; } .timeline-content > p, .journal-card-main > p { font-size:15px; } .journal-card { grid-template-columns:34px minmax(0,1fr) 34px; gap:.7rem; } .journal-card h2 { font-size:2rem; } .archive-footer-links { gap:1rem; } }
+
+/* RPTO TRAINING VISUAL — Make the learning journey tangible without adding visual noise. */
+.license-visual { position:relative; overflow:hidden; height:190px; margin:-1.5rem -1.5rem 1.35rem; background:#1A3038; }
+.license-visual img { width:100%; height:100%; display:block; object-fit:cover; filter:saturate(.82) contrast(1.02); }
+.license-visual:after { content:""; position:absolute; inset:0; background:linear-gradient(180deg, rgba(18,43,58,.05), rgba(18,43,58,.65)); pointer-events:none; }
+.license-visual span { position:absolute; z-index:1; left:1.2rem; bottom:1rem; color:#F4EFE7; font-size:10px; font-weight:800; letter-spacing:.12em; text-transform:uppercase; }
+.licensing-disclaimer { color:rgba(244,239,231,.58); font-size:12px; line-height:1.55; }
+@media (max-width:760px) { .license-visual { height:165px; margin:-1rem -1rem 1rem; } }
