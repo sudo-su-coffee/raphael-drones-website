@@ -18,7 +18,7 @@ const services = [
   { number: "06", title: "Drone solutions", text: "Technology, equipment, and support shaped around your requirement." },
 ];
 
-const nav = ["Services", "Products", "Vayal", "Licensing", "Founder", "Contact"];
+const nav = ["Services", "Products", "Vayal", "Licensing", "Contact"];
 
 function scrollTo(id: string) {
   document.querySelector(id)?.scrollIntoView({ behavior: "smooth" });

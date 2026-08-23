@@ -273,3 +273,16 @@
 .vayal-modal-points span { font-size:12px; line-height:1.25; }
 .vayal-modal-actions { display:flex; flex-wrap:wrap; align-items:center; gap:1rem; }
 @media (max-width:639px) { .mobile-menu { padding-top:6.5rem; } .vayal-modal-card { max-height:calc(100dvh - 2rem); overflow-y:auto; } .vayal-modal-points { grid-template-columns:1fr; gap:.4rem; } .vayal-modal-points div { flex-direction:row; align-items:center; justify-content:space-between; padding:.7rem 0; border-top:0; border-bottom:1px solid #CFC4B5; } }
+
+/* FINAL MOTION — Quiet, premium movement only; always respect reduced-motion preferences. */
+@media (prefers-reduced-motion: no-preference) {
+  .hero-copy { animation: rise-in .7s cubic-bezier(.23,1,.32,1) both; }
+  .hero-visual { animation: rise-in .8s .08s cubic-bezier(.23,1,.32,1) both; }
+  .section-heading, .service-grid, .product-grid, .vayal-copy, .vayal-panel, .about-image, .about-copy, .founder-photo, .founder-copy, .training-list, .license-panel, .capability-copy, .capability-image, .contact-grid { animation: rise-in .65s .06s cubic-bezier(.23,1,.32,1) both; }
+  .hero-image img, .about-image img, .founder-photo img, .capability-image img, .product-card img { transition: transform .5s cubic-bezier(.23,1,.32,1), filter .5s ease; }
+  .hero-image:hover img, .about-image:hover img, .founder-photo:hover img, .capability-image:hover img, .product-card:hover img { transform:scale(1.025); filter:saturate(1.04) contrast(1.02); }
+  .primary-button, .outline-button, .header-cta, .text-button, .product-link { transition: transform .18s cubic-bezier(.23,1,.32,1), background-color .18s ease, color .18s ease; }
+  .primary-button:active, .outline-button:active, .header-cta:active, .text-button:active, .product-link:active { transform:scale(.97); }
+}
+@keyframes rise-in { from { opacity:0; transform:translateY(16px); } to { opacity:1; transform:translateY(0); } }
+@media (prefers-reduced-motion: reduce) { *, *:before, *:after { scroll-behavior:auto !important; animation-duration:.01ms !important; animation-iteration-count:1 !important; transition-duration:.01ms !important; } }

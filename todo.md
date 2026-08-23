@@ -108,3 +108,9 @@
 - [x] Add an accessible Vayal Vimaani app-launch popup with booking and certified-pilot messaging.
 - [x] Keep app-store actions as safe # placeholders until official URLs are supplied.
 - [x] Audit desktop/mobile routes and interactions, save the final checkpoint, and push main to GitHub.
+
+## Two final patches
+
+- [x] Remove the non-essential Founder item from the primary menu while keeping Gallery and Journal visible.
+- [x] Add tasteful entrance, hover, and image motion with reduced-motion support.
+- [x] Verify desktop/mobile navigation and motion, then save the final checkpoint.
