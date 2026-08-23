@@ -51,3 +51,7 @@ Use the user-provided full logo artwork as the source of truth. Preserve its dro
 
 ### Source content to reuse
 The supplied package identifies these service areas: agricultural drone spraying, indoor mapping, GIS and LiDAR work, drone training programs, drone light shows, product purchase, and enquiry booking. It also provides contact emails including `support@raphaeldrones.com`, `info@raphaeldrones.com`, and `raphaeldrones@gmail.com`, plus the Perumalpatti, Tenkasi, Tamil Nadu address. Company profile context from LinkedIn: Rajapalayam, Tamil Nadu; founded in 2024; 2–10 employees; aviation and aerospace component manufacturing.
+
+## Modern unique pass — Aerial Signal
+
+This pass shifts from straightforward agency layout to a signature aerial-control-room composition: a bright cyan flight path cutting through a deep charcoal canvas, oversized type sitting beside a live-looking mission panel, and bold diagonal section transitions. The provided logo remains the visual anchor. Modernity comes from contrast, scale, and spatial tension—not from excessive gradients or effects. The interface should feel like a premium brand system for a company that moves between sky, field, and data.

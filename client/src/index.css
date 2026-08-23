@@ -36,3 +36,42 @@
 @media (min-width:1024px) { .site-width { max-width:1280px; padding-inline:2.5rem; } .hero-grid { grid-template-columns:.86fr 1.14fr; gap:5rem; min-height:700px; } .hero-visual { min-height:590px; } .section-heading { grid-template-columns:1fr 1fr; gap:6rem; } .about-grid, .capability-grid, .training-grid, .contact-grid { grid-template-columns:1fr 1fr; gap:7rem; } .about-image { min-height:560px; } .capability-image { min-height:600px; } .training-section, .contact-section { padding-block:7.5rem; } }
 @media (prefers-reduced-motion: no-preference) { .hero-copy { animation:fade-up .45s ease both; } .hero-visual { animation:fade-up .45s .08s ease both; } }
 @keyframes fade-up { from { opacity:0; transform:translateY(12px); } to { opacity:1; transform:none; } }
+
+/* AERIAL SIGNAL OVERRIDES — Signature contrast, telemetry overlays, and restrained cyan instrumentation. */
+@layer components {
+  .hero-section { position:relative; background:#111615; color:#fff; }
+  .hero-section::before { content:'RAPHAEL / AIRBORNE SYSTEMS'; position:absolute; top:2rem; right:2.5rem; color:rgba(255,255,255,.28); font-size:9px; font-weight:800; letter-spacing:.18em; writing-mode:vertical-rl; }
+  .hero-section::after { content:''; position:absolute; bottom:1.5rem; left:50%; width:1px; height:5rem; background:linear-gradient(to bottom, transparent, #5DE7E6); opacity:.8; }
+  .hero-section .hero-copy>p { color:#AAB6B4; }
+  .hero-section h1, .hero-section h1 strong { color:#fff; }
+  .hero-section h1 span { color:#5DE7E6; }
+  .hero-section .cyan-line { color:#B7C3C1; }
+  .hero-section .hero-meta { color:#8A9896; }
+  .hero-section .text-button { color:#fff; }
+  .hero-section .text-button:hover { color:#5DE7E6; }
+  .hero-visual { isolation:isolate; }
+  .hero-image { border:1px solid rgba(93,231,230,.42); border-radius:0 0 0 190px; box-shadow:0 0 0 1px rgba(255,255,255,.05), 0 26px 80px rgba(0,0,0,.4); }
+  .hero-image::after { content:''; position:absolute; inset:0; background:linear-gradient(135deg, rgba(93,231,230,.12), transparent 35%, rgba(17,22,21,.24)); }
+  .hero-badge { background:#5DE7E6; color:#111615; }
+  .badge-dot { background:#111615; }
+  .flight-path { top:1rem; right:1rem; border-color:rgba(93,231,230,.7); border-left-color:transparent; transform:rotate(22deg); }
+  .mission-panel { position:absolute; top:2rem; left:0; z-index:2; display:flex; min-width:165px; flex-direction:column; gap:.35rem; border-left:2px solid #5DE7E6; background:rgba(17,22,21,.85); padding:1rem; color:#fff; backdrop-filter:blur(10px); }
+  .mission-kicker, .hero-coordinates { color:#7D8B89; font-size:9px; font-weight:800; letter-spacing:.16em; text-transform:uppercase; }
+  .mission-panel strong { font-family:'Space Grotesk'; font-size:15px; letter-spacing:-.03em; }
+  .mission-status { display:flex; align-items:center; gap:.45rem; color:#5DE7E6; font-size:9px; font-weight:800; letter-spacing:.1em; text-transform:uppercase; }
+  .mission-status i { display:block; height:5px; width:5px; border-radius:50%; background:#5DE7E6; }
+  .hero-coordinates { position:absolute; right:.5rem; bottom:4.5rem; z-index:2; line-height:1.7; text-align:right; }
+  .services-section { position:relative; }
+  .services-section::before { content:'02'; position:absolute; top:5rem; right:3rem; color:#E5EBEA; font-family:'Space Grotesk'; font-size:10rem; font-weight:700; letter-spacing:-.12em; line-height:1; pointer-events:none; }
+  .service-grid { position:relative; z-index:1; }
+  .service-card { background:transparent; }
+  .service-card:hover { background:#F2F7F6; }
+  .about-section { background:#EAF1EF; }
+  .about-image { border-radius:0 0 140px 0; }
+  .training-section { position:relative; overflow:hidden; }
+  .training-section::after { content:'FLIGHT / DATA / IMPACT'; position:absolute; right:2.5rem; top:3rem; color:rgba(255,255,255,.2); font-size:9px; font-weight:800; letter-spacing:.2em; writing-mode:vertical-rl; }
+  .contact-section { position:relative; }
+  .contact-section::before { content:'04'; position:absolute; right:4rem; top:5rem; color:#E7EEEC; font-family:'Space Grotesk'; font-size:11rem; font-weight:700; letter-spacing:-.13em; line-height:1; pointer-events:none; }
+}
+@media (min-width:1024px) { .hero-section::before { right:3rem; } .hero-grid { min-height:760px; padding-block:6rem; } .hero-visual { min-height:630px; } .hero-image { inset:0 0 1.5rem 2rem; } .mission-panel { left:.4rem; } }
+@media (max-width:639px) { .hero-section::before { top:1.25rem; right:1.25rem; font-size:7px; } .hero-section::after { display:none; } .mission-panel { top:1rem; left:.5rem; } .hero-coordinates { bottom:3.5rem; right:.35rem; } .services-section::before, .contact-section::before { right:1rem; top:3rem; font-size:6rem; } .training-section::after { right:1rem; top:2rem; } }
