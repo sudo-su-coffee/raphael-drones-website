@@ -22,3 +22,10 @@
 - [x] Replace the current straightforward section rhythm with a more memorable spatial composition while preserving clarity.
 - [x] Add premium but restrained interactions, hover states, and responsive behavior without slowing the first render.
 - [x] Recheck the full page on desktop and mobile, then save an updated checkpoint.
+
+## Founder section update
+
+- [x] Upload the user-provided CEO and founder portrait to the approved web asset storage.
+- [x] Add an authentic CEO & Founder section using only confirmed company context and the supplied portrait.
+- [x] Verify the portrait crop, contrast, accessibility text, and responsive layout.
+- [x] Save and deliver the founder update checkpoint.

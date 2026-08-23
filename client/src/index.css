@@ -75,3 +75,19 @@
 }
 @media (min-width:1024px) { .hero-section::before { right:3rem; } .hero-grid { min-height:760px; padding-block:6rem; } .hero-visual { min-height:630px; } .hero-image { inset:0 0 1.5rem 2rem; } .mission-panel { left:.4rem; } }
 @media (max-width:639px) { .hero-section::before { top:1.25rem; right:1.25rem; font-size:7px; } .hero-section::after { display:none; } .mission-panel { top:1rem; left:.5rem; } .hero-coordinates { bottom:3.5rem; right:.35rem; } .services-section::before, .contact-section::before { right:1rem; top:3rem; font-size:6rem; } .training-section::after { right:1rem; top:2rem; } }
+
+/* FOUNDER SECTION — Authentic portrait, calm authority, and cyan signal detail. */
+@layer components {
+  .founder-section { background:#fff; padding-block:5.5rem; }
+  .founder-grid { display:grid; gap:3rem; }
+  .founder-photo { position:relative; min-height:430px; overflow:hidden; background:#111615; border-radius:0 0 150px 0; }
+  .founder-photo img { height:100%; width:100%; object-fit:cover; object-position:center 30%; filter:saturate(.72) contrast(1.05); }
+  .founder-photo::after { content:''; position:absolute; inset:0; background:linear-gradient(135deg, rgba(93,231,230,.16), transparent 35%, rgba(17,22,21,.25)); pointer-events:none; }
+  .founder-photo-label { position:absolute; bottom:1rem; left:1rem; z-index:1; display:flex; align-items:center; gap:.5rem; background:#111615; padding:.75rem .9rem; color:#fff; font-size:10px; font-weight:800; letter-spacing:.13em; text-transform:uppercase; }
+  .founder-copy { align-self:center; max-width:520px; }
+  .founder-copy p { margin-top:1.5rem; color:#63706F; font-size:16px; line-height:1.75; }
+  .founder-signoff { display:flex; flex-direction:column; gap:.3rem; margin-top:2.3rem; border-left:2px solid #5DE7E6; padding-left:1rem; }
+  .founder-signoff strong { font-family:'Space Grotesk'; font-size:18px; letter-spacing:-.04em; }
+  .founder-signoff span { color:#85918F; font-size:10px; font-weight:800; letter-spacing:.13em; text-transform:uppercase; }
+}
+@media (min-width:1024px) { .founder-section { padding-block:7.5rem; } .founder-grid { grid-template-columns:1.05fr .95fr; gap:7rem; } .founder-photo { min-height:620px; } }
