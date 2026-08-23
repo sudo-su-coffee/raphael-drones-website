@@ -67,3 +67,11 @@
 - [x] Reduce Vayal Vimaani content to a simple service explanation and clear actions.
 - [x] Add Play Store and App Store SVG icons with `#` placeholder links only.
 - [x] Keep enquiry and call actions concise and verify the result before checkpointing.
+
+## Agricultural visual and RPTO clarification
+
+- [x] Generate a website-ready agricultural drone field-spraying image with composition suitable for the product card.
+- [x] Integrate the generated image into the Agricultural drone systems card without reusing it elsewhere.
+- [x] Revise RPTO content so it explains training, licensing guidance, and authority-issued certification accurately.
+- [x] Review related offering copy for clarity and premium restraint.
+- [x] Verify desktop/mobile layout and save a new checkpoint.
