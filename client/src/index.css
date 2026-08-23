@@ -91,3 +91,58 @@
   .founder-signoff span { color:#85918F; font-size:10px; font-weight:800; letter-spacing:.13em; text-transform:uppercase; }
 }
 @media (min-width:1024px) { .founder-section { padding-block:7.5rem; } .founder-grid { grid-template-columns:1.05fr .95fr; gap:7rem; } .founder-photo { min-height:620px; } }
+
+/* OFFERINGS EXTENSION — Products, Vayal Vimaani, and licensing are first-class business pillars. */
+@layer components {
+  .products-section { background:#fff; }
+  .product-grid { display:grid; gap:1rem; }
+  .product-card { position:relative; min-height:330px; overflow:hidden; padding:1.5rem; }
+  .product-card-dark { display:flex; flex-direction:column; justify-content:space-between; background:#122B3A; color:#fff; }
+  .product-card-light { display:flex; flex-direction:column; justify-content:space-between; background:#EDE5D9; color:#122B3A; }
+  .product-card-photo { padding:0; background:#122B3A; color:#fff; }
+  .product-card-photo img { height:100%; width:100%; object-fit:cover; filter:saturate(.72) contrast(1.06); }
+  .product-photo-overlay { position:absolute; inset:0; display:flex; flex-direction:column; justify-content:space-between; padding:1.5rem; background:linear-gradient(to bottom, rgba(18,43,58,.72), transparent 36%, rgba(18,43,58,.8)); }
+  .product-index { font-size:10px; font-weight:800; letter-spacing:.16em; text-transform:uppercase; opacity:.65; }
+  .product-card h3 { font-family:'Space Grotesk'; font-size:clamp(2rem, 4vw, 3.5rem); line-height:.9; letter-spacing:-.07em; }
+  .product-card p { max-width:285px; color:rgba(255,255,255,.68); font-size:13px; line-height:1.65; }
+  .product-card-light p { color:#66727A; }
+  .product-link { display:inline-flex; align-items:center; gap:.55rem; width:max-content; border-bottom:1px solid currentColor; padding-bottom:.45rem; font-size:10px; font-weight:800; letter-spacing:.12em; text-transform:uppercase; }
+  .product-link:hover { color:#B96B4B; }
+  .vayal-section { overflow:hidden; background:#F4EFE7; padding-block:5.5rem; }
+  .vayal-grid { display:grid; gap:3rem; }
+  .vayal-copy { max-width:540px; align-self:center; }
+  .vayal-copy p { margin-top:1.5rem; color:#63706F; font-size:16px; line-height:1.75; }
+  .vayal-panel { position:relative; min-height:510px; overflow:hidden; background:#122B3A; color:#fff; padding:1.5rem; }
+  .vayal-panel-top, .license-top { display:flex; align-items:center; justify-content:space-between; color:#9EA9A8; font-size:10px; font-weight:800; letter-spacing:.15em; text-transform:uppercase; }
+  .vayal-live { display:flex; align-items:center; gap:.5rem; color:#B96B4B; }
+  .vayal-live i { display:block; height:6px; width:6px; border-radius:50%; background:#B96B4B; }
+  .vayal-orbit { position:relative; display:flex; height:235px; align-items:center; justify-content:center; }
+  .vayal-orbit::before, .vayal-orbit::after { content:''; position:absolute; border:1px solid rgba(185,107,75,.35); border-radius:50%; transform:rotate(-18deg); }
+  .vayal-orbit::before { height:155px; width:310px; }
+  .vayal-orbit::after { height:215px; width:390px; }
+  .vayal-orbit strong { position:relative; z-index:1; display:flex; height:92px; width:92px; align-items:center; justify-content:center; border:1px solid rgba(255,255,255,.35); border-radius:50%; font-family:'Space Grotesk'; font-size:54px; color:#B96B4B; }
+  .orbit-dot { position:absolute; z-index:2; top:24px; right:18%; display:block; height:10px; width:10px; border-radius:50%; background:#B96B4B; box-shadow:0 0 0 9px rgba(185,107,75,.13); }
+  .orbit-line { position:absolute; left:12%; right:12%; bottom:18px; height:1px; background:linear-gradient(to right, transparent, rgba(255,255,255,.22), transparent); }
+  .vayal-list { border-top:1px solid rgba(255,255,255,.17); }
+  .vayal-list>div { display:grid; grid-template-columns:38px 1fr; gap:.25rem 1rem; border-bottom:1px solid rgba(255,255,255,.17); padding:.8rem 0; }
+  .vayal-list b { color:#B96B4B; font-size:10px; letter-spacing:.1em; }
+  .vayal-list span { font-family:'Space Grotesk'; font-size:17px; letter-spacing:-.04em; }
+  .vayal-list small { grid-column:2; color:#95A29F; font-size:11px; }
+  .licensing-section { background:#EDE5D9; padding-block:5.5rem; }
+  .licensing-grid { display:grid; gap:3rem; }
+  .licensing-grid>div:first-child { align-self:center; }
+  .licensing-grid p { max-width:470px; margin-top:1.5rem; color:#63706F; font-size:16px; line-height:1.75; }
+  .license-panel { background:#fff; padding:1.5rem; }
+  .license-top { border-bottom:1px solid #DDD4C4; padding-bottom:1rem; color:#66727A; }
+  .license-scale { display:flex; align-items:center; gap:.8rem; padding:3rem 0 2rem; font-size:10px; font-weight:800; text-transform:uppercase; }
+  .scale-small, .scale-large { color:#66727A; letter-spacing:.1em; }
+  .scale-line { position:relative; display:flex; flex:1; align-items:center; justify-content:space-between; }
+  .scale-line::before { content:''; position:absolute; left:0; right:0; height:2px; background:#B96B4B; }
+  .scale-line i { position:relative; z-index:1; display:block; height:10px; width:10px; border-radius:50%; background:#B96B4B; box-shadow:0 0 0 4px #fff; }
+  .license-points { display:grid; gap:.75rem; border-top:1px solid #DDD4C4; border-bottom:1px solid #DDD4C4; padding:1.25rem 0; }
+  .license-points div { display:flex; align-items:center; gap:.65rem; color:#122B3A; font-size:13px; font-weight:700; }
+  .license-points svg { color:#B96B4B; }
+  .license-note { margin-top:1.25rem !important; color:#788481 !important; font-size:12px !important; line-height:1.6 !important; }
+}
+@media (min-width:640px) { .product-grid { grid-template-columns:1fr 1fr; } .product-card-photo { grid-column:span 2; } }
+@media (min-width:1024px) { .product-grid { grid-template-columns:1fr 1fr 1fr; gap:1.25rem; } .product-card { min-height:390px; } .product-card-photo { grid-column:auto; } .vayal-section, .licensing-section { padding-block:7.5rem; } .vayal-grid, .licensing-grid { grid-template-columns:1fr 1fr; gap:7rem; } .vayal-panel { min-height:600px; padding:2rem; } .licensing-grid { align-items:center; } .license-panel { padding:2rem; } }

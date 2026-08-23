@@ -42,3 +42,12 @@
 - [x] Make the chosen palette feel uniquely Raphael Drones rather than a generic color swap.
 - [x] Add standout visual details while keeping the logo’s original blue limited to the logo.
 - [x] Verify desktop/mobile presentation and save the updated checkpoint.
+
+## Expanded business offerings update
+
+- [x] Add drone manufacturing and drone sales as primary capabilities.
+- [x] Add a dedicated Vayal Vimaani section for drone-based crop spraying and farmer support.
+- [x] Explain government subsidy assistance carefully without promising eligibility or approval.
+- [x] Add agriculture, field-work, and other-purpose applications beyond spraying.
+- [x] Add drone pilot licensing and certification support for small to larger drone categories, using the supplied RPTO/RPO context.
+- [x] Verify the expanded information architecture and save a new checkpoint.
