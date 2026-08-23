@@ -286,3 +286,16 @@
 }
 @keyframes rise-in { from { opacity:0; transform:translateY(16px); } to { opacity:1; transform:translateY(0); } }
 @media (prefers-reduced-motion: reduce) { *, *:before, *:after { scroll-behavior:auto !important; animation-duration:.01ms !important; animation-iteration-count:1 !important; transition-duration:.01ms !important; } }
+
+/* ARCHIVE PREMIUM UX — Featured records, editorial rhythm, and simple image navigation. */
+.timeline-item.featured { padding-top:1.15rem; border-top:2px solid #B96B4B; }
+.featured-flag, .journal-latest { display:inline-flex; align-items:center; gap:.45rem; margin-bottom:.7rem; color:#B96B4B; font-size:9px; font-weight:800; letter-spacing:.12em; text-transform:uppercase; }
+.featured-flag:before, .journal-latest:before { content:""; width:18px; height:1px; background:#B96B4B; }
+.timeline-item.featured .timeline-thumb { height:178px; }
+.lightbox-nav { position:absolute; top:50%; display:flex; align-items:center; justify-content:center; width:46px; height:46px; border:1px solid rgba(244,239,231,.35); border-radius:50%; background:rgba(18,43,58,.55); color:#F4EFE7; transform:translateY(-50%); cursor:pointer; }
+.lightbox-nav:hover { border-color:#B96B4B; background:#B96B4B; color:#122B3A; }
+.lightbox-prev { left:1.5rem; }
+.lightbox-next { right:1.5rem; }
+.journal-card.featured { padding-top:1.35rem; border-top:2px solid #B96B4B; }
+.journal-card.featured h2 { font-size:clamp(1.8rem,3vw,2.65rem); }
+@media (max-width:760px) { .timeline-item.featured .timeline-thumb { height:210px; } .lightbox-nav { top:auto; bottom:1.5rem; transform:none; } .lightbox-prev { left:1.25rem; } .lightbox-next { right:1.25rem; } }

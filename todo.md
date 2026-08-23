@@ -119,3 +119,11 @@
 
 - [x] Set the homepage primary menu to exactly four names, including Gallery and Journal.
 - [x] Verify the four-name menu on desktop and mobile, then save the checkpoint.
+
+## Premium Gallery and Journal UX pass
+
+- [x] Add a more premium featured-record treatment and stronger visual rhythm to Gallery.
+- [x] Improve Gallery filters, metadata, lightbox controls, and related-record navigation.
+- [x] Add Journal featured-post hierarchy, cleaner reading previews, and clearer official-update labels.
+- [x] Improve Journal filtering, in-page reading controls, and next/previous content flow.
+- [x] Verify both routes on desktop/mobile and save a new checkpoint.
