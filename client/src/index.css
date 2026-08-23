@@ -251,3 +251,25 @@
 .journal-toolbar strong { display:block; margin-top:.65rem; font-size:22px; font-weight:500; letter-spacing:-.03em; }
 .journal-tag.official { color:#122B3A; }
 @media (max-width:760px) { .timeline-entry-grid { grid-template-columns:1fr; gap:1rem; } .timeline-thumb { height:180px; } .lightbox-frame div { align-items:flex-start; flex-direction:column; } .journal-toolbar { align-items:flex-start; flex-direction:column; } }
+
+/* FINAL MOBILE + VAYAL APP — Full-screen navigation and a focused, optimistic app preview. */
+.site-header { position:relative; z-index:45; }
+.mobile-menu { position:fixed; z-index:40; inset:0; min-height:100dvh; padding:7rem 0 2rem; background:#122B3A; color:#F4EFE7; }
+.mobile-menu .site-width { height:100%; justify-content:flex-start; gap:.15rem; overflow-y:auto; }
+.mobile-menu .mobile-link { display:flex; align-items:center; justify-content:space-between; padding:1.05rem 0; border-bottom:1px solid rgba(244,239,231,.16); color:#F4EFE7; font-size:clamp(1.45rem,7vw,2.4rem); font-weight:500; letter-spacing:-.04em; text-decoration:none; }
+.mobile-menu .mobile-link:hover { color:#D18A63; }
+.mobile-menu .mobile-cta { display:inline-flex; align-items:center; gap:.6rem; width:max-content; margin-top:2rem; padding:.9rem 1.15rem; background:#B96B4B; color:#122B3A; font-size:11px; font-weight:800; letter-spacing:.1em; text-decoration:none; text-transform:uppercase; }
+.vayal-preview-button { border-color:#CFC4B5; }
+.vayal-modal { position:fixed; z-index:60; inset:0; display:flex; align-items:center; justify-content:center; padding:1.25rem; background:rgba(18,43,58,.82); }
+.vayal-modal-card { position:relative; width:min(100%,560px); padding:clamp(2rem,6vw,4rem); background:#F4EFE7; color:#17232B; box-shadow:0 30px 90px rgba(0,0,0,.24); }
+.vayal-modal-card h2 { margin:.85rem 0 1rem; font-size:clamp(2.8rem,7vw,5rem); line-height:.86; letter-spacing:-.075em; }
+.vayal-modal-card h2 span { color:#B96B4B; }
+.vayal-modal-card > p { max-width:420px; color:#66716F; font-size:16px; line-height:1.55; }
+.vayal-modal-close { position:absolute; top:1rem; right:1rem; display:flex; align-items:center; justify-content:center; width:38px; height:38px; border:1px solid #CFC4B5; border-radius:50%; background:transparent; color:#122B3A; cursor:pointer; }
+.vayal-modal-close:hover { background:#B96B4B; border-color:#B96B4B; }
+.vayal-modal-points { display:grid; grid-template-columns:repeat(3,1fr); gap:.7rem; margin:2rem 0; }
+.vayal-modal-points div { display:flex; flex-direction:column; gap:.45rem; padding:.8rem; border-top:2px solid #B96B4B; }
+.vayal-modal-points strong { color:#B96B4B; font-size:11px; letter-spacing:.08em; }
+.vayal-modal-points span { font-size:12px; line-height:1.25; }
+.vayal-modal-actions { display:flex; flex-wrap:wrap; align-items:center; gap:1rem; }
+@media (max-width:639px) { .mobile-menu { padding-top:6.5rem; } .vayal-modal-card { max-height:calc(100dvh - 2rem); overflow-y:auto; } .vayal-modal-points { grid-template-columns:1fr; gap:.4rem; } .vayal-modal-points div { flex-direction:row; align-items:center; justify-content:space-between; padding:.7rem 0; border-top:0; border-bottom:1px solid #CFC4B5; } }

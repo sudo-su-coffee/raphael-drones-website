@@ -100,3 +100,11 @@
 - [x] Keep official claims clearly identified and do not fabricate events, reviews, or testimonials.
 - [x] Audit homepage, Gallery, Journal, mobile layout, links, and build output.
 - [x] Create a private GitHub repository and push the finalized project.
+
+## Final navigation and Vayal popup pass
+
+- [x] Add Gallery and Journal to desktop and mobile navigation.
+- [x] Make the mobile menu full-screen, focused, and easy to dismiss.
+- [x] Add an accessible Vayal Vimaani app-launch popup with booking and certified-pilot messaging.
+- [x] Keep app-store actions as safe # placeholders until official URLs are supplied.
+- [x] Audit desktop/mobile routes and interactions, save the final checkpoint, and push main to GitHub.
