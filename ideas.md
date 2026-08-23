@@ -55,7 +55,3 @@ The supplied package identifies these service areas: agricultural drone spraying
 ## Modern unique pass — Aerial Signal
 
 This pass shifts from straightforward agency layout to a signature aerial-control-room composition: a bright cyan flight path cutting through a deep charcoal canvas, oversized type sitting beside a live-looking mission panel, and bold diagonal section transitions. The provided logo remains the visual anchor. Modernity comes from contrast, scale, and spatial tension—not from excessive gradients or effects. The interface should feel like a premium brand system for a company that moves between sky, field, and data.
-
-## Premium theme update — Canyon & Navy
-
-The new palette replaces the bright cyan-led feel with a warmer premium system: **Porcelain #F7F2EA** for the main canvas, **Midnight Navy #142A3A** for authority and contrast, **Terracotta #C56A4A** for actions and human warmth, and **Antique Gold #C7A45B** for small precision details. The supplied cyan logo remains visible as the brand asset, while the surrounding system becomes calmer, more editorial, and easier to read.
