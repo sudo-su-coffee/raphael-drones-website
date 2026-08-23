@@ -1,0 +1,27 @@
+/* STYLE REMINDER — Minimal optimistic journal: editorial reading rhythm, warm sand surfaces, deep navy type, copper highlights, and no complicated article routes. */
+import { useEffect, useState } from "react";
+import { ArrowLeft, ArrowUpRight, ChevronDown, Instagram, Linkedin, MapPin } from "lucide-react";
+import { Link } from "wouter";
+
+const LOGO = "/manus-storage/raphael-logo_4f5b0bc1.png";
+
+type Post = { tag: string; title: string; intro: string; body: string };
+const posts: Post[] = [
+  { tag: "Precision agriculture", title: "What drone spraying changes for a working farm", intro: "A clearer look at how aerial application can support timing, coverage, and practical field decisions.", body: "Drone-based spraying is not about replacing farming knowledge. It is about helping a team apply the right work across a field with less walking, measured coverage, and a clearer view of the operation. The right approach depends on crop, field condition, approved inputs, weather, and local requirements." },
+  { tag: "GIS + LiDAR", title: "From aerial capture to a map you can use", intro: "Why useful geospatial work begins with the decision—not the equipment.", body: "Aerial imagery, GIS, and LiDAR become valuable when they help someone decide what to inspect, measure, plan, or improve next. A good workflow starts with the question, chooses the right capture method, and turns the result into information that a field team or decision-maker can understand." },
+  { tag: "Pilot learning", title: "From first flight to field-ready", intro: "A practical way to think about drone pilot training and responsible operations.", body: "Good pilot learning combines aircraft basics, safety, operating discipline, mission planning, and practical confidence. For formal remote pilot licensing, training and assessment follow the requirements of the relevant aviation authority and the applicable RPTO pathway." },
+  { tag: "Vayal Vimaani", title: "Bringing precision spraying closer to farmers", intro: "How Vayal Vimaani connects agricultural drone work with a simple farmer-first service model.", body: "Vayal Vimaani is built around a straightforward idea: make modern crop-spraying support easier to access. The service brings trained operators, agricultural drone systems, and practical field coordination together so farmers can ask the right questions before work begins." },
+];
+
+export default function Journal() {
+  const [open, setOpen] = useState<string | null>(null);
+  useEffect(() => { document.title = "Journal — Raphael Drones"; }, []);
+
+  return (
+    <div className="archive-page journal-page">
+      <header className="archive-header"><div className="archive-topline"><span>Raphael Drones & GIS Services</span><span>Ideas from the field</span></div><div className="site-width archive-nav"><Link href="/" className="archive-brand"><img src={LOGO} alt="Raphael Drones" /></Link><nav><Link href="/">Home</Link><Link href="/gallery">Gallery</Link><Link href="/journal" className="active">Journal</Link></nav><a href="https://www.linkedin.com/company/raphael-drones-and-gis-services" target="_blank" rel="noreferrer" className="archive-social"><Linkedin size={15} /> LinkedIn <ArrowUpRight size={13} /></a></div></header>
+      <main><section className="archive-hero journal-hero"><div className="site-width archive-hero-grid"><div><Link href="/" className="back-link"><ArrowLeft size={15} /> Back to Raphael Drones</Link><div className="eyebrow copper-line">Journal / field notes</div><h1>Ideas that<br /><span>take root.</span></h1></div><div className="archive-intro"><p>Practical notes about drones, GIS, agriculture, training, and building useful technology close to the ground.</p><div className="archive-location"><MapPin size={15} /> Written from Tamil Nadu</div></div></div></section><section className="journal-list-section"><div className="site-width"><div className="journal-list">{posts.map((post, index) => <article className={open === post.title ? "journal-card open" : "journal-card"} key={post.title}><div className="journal-number">0{index + 1}</div><div className="journal-card-main"><div className="journal-tag">{post.tag}</div><h2>{post.title}</h2><p>{post.intro}</p>{open === post.title && <div className="journal-body"><p>{post.body}</p><span>Raphael Drones & GIS Services</span></div>}</div><button aria-expanded={open === post.title} aria-label={`Read ${post.title}`} onClick={() => setOpen(open === post.title ? null : post.title)}><ChevronDown size={19} /></button></article>)}</div><div className="journal-footer-note"><span>New field notes can be added here as your work, training, and collaborations grow.</span><a href="https://www.linkedin.com/company/raphael-drones-and-gis-services" target="_blank" rel="noreferrer">Follow the latest on LinkedIn <ArrowUpRight size={14} /></a></div></div></section></main>
+      <footer className="archive-footer"><div className="site-width archive-footer-inner"><div><img src={LOGO} alt="Raphael Drones" /><p>Practical aerial technology for fields, teams, and what comes next.</p></div><div className="archive-footer-links"><Link href="/gallery">View the Gallery <ArrowUpRight size={14} /></Link><a href="https://www.linkedin.com/company/raphael-drones-and-gis-services" target="_blank" rel="noreferrer"><Linkedin size={14} /> LinkedIn</a><a href="https://www.instagram.com/raphael_drones_gis_services/" target="_blank" rel="noreferrer"><Instagram size={14} /> Instagram</a></div></div></footer>
+    </div>
+  );
+}

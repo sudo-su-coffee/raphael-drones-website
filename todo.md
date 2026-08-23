@@ -75,3 +75,13 @@
 - [x] Revise RPTO content so it explains training, licensing guidance, and authority-issued certification accurately.
 - [x] Review related offering copy for clarity and premium restraint.
 - [x] Verify desktop/mobile layout and save a new checkpoint.
+
+## Gallery and Journal expansion
+
+- [x] Add simple Gallery and Journal routes with clear top-level navigation.
+- [x] Build a gallery list/timeline pattern that can scale beyond 100 verified events and training records without requiring a complex detail page.
+- [x] Add initial verified milestone content and leave the structure ready for more real records; do not fabricate events or testimonials.
+- [x] Build a same-page journal/blog list with readable educational posts and SEO-friendly titles/descriptions.
+- [x] Add verified social-media redirects, beginning with LinkedIn and other supplied/confirmed profiles.
+- [x] Keep all browsing simple: list, filter/category, and optional in-page expansion rather than separate detail views.
+- [x] Verify all routes on desktop/mobile and save a new checkpoint.

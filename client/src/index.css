@@ -157,3 +157,70 @@
   .licensing-section .eyebrow { max-width:360px; }
 }
 @media (max-width:639px) { .vayal-actions { align-items:flex-start; flex-direction:column; gap:1rem; } .store-actions { width:100%; } }
+
+/* ARCHIVE PAGES — Simple list-first browsing for a growing gallery and journal. */
+.archive-page { min-height:100vh; background:#F4EFE7; color:#17232B; }
+.archive-header { background:#fff; border-bottom:1px solid rgba(18,43,58,.12); }
+.archive-topline { display:flex; justify-content:space-between; gap:1rem; padding:.55rem 2rem; background:#122B3A; color:#F4EFE7; font-size:9px; font-weight:800; letter-spacing:.16em; text-transform:uppercase; }
+.archive-nav { display:flex; align-items:center; justify-content:space-between; min-height:82px; gap:2rem; }
+.archive-brand img { display:block; width:84px; height:auto; }
+.archive-nav nav { display:flex; align-items:center; gap:2rem; margin-left:auto; }
+.archive-nav nav a, .archive-social { color:#17232B; font-size:11px; font-weight:800; letter-spacing:.13em; text-transform:uppercase; text-decoration:none; transition:color .18s ease; }
+.archive-nav nav a:hover, .archive-nav nav a.active, .archive-social:hover { color:#B96B4B; }
+.archive-social { display:flex; align-items:center; gap:.45rem; }
+.archive-hero { padding:7rem 0 6rem; background:#122B3A; color:#F4EFE7; }
+.archive-hero-grid { display:grid; grid-template-columns:minmax(0,1.2fr) minmax(280px,.65fr); align-items:end; gap:5rem; }
+.back-link { display:inline-flex; align-items:center; gap:.5rem; color:#F4EFE7; font-size:11px; font-weight:800; letter-spacing:.1em; text-decoration:none; text-transform:uppercase; margin-bottom:4rem; }
+.back-link:hover { color:#D18A63; }
+.archive-hero h1 { margin:.9rem 0 0; font-size:clamp(4rem,9vw,8.7rem); line-height:.84; letter-spacing:-.08em; }
+.archive-hero h1 span { color:#C9825B; }
+.archive-intro { max-width:320px; padding-bottom:.4rem; }
+.archive-intro p { color:rgba(244,239,231,.72); font-size:18px; line-height:1.5; }
+.archive-location { display:flex; align-items:center; gap:.5rem; margin-top:2rem; color:#C9825B; font-size:11px; font-weight:800; letter-spacing:.08em; text-transform:uppercase; }
+.archive-list-section, .journal-list-section { padding:5rem 0 7rem; }
+.archive-toolbar { display:flex; justify-content:space-between; align-items:end; gap:2rem; padding-bottom:2rem; border-bottom:1px solid rgba(18,43,58,.2); }
+.archive-toolbar strong { display:block; margin-top:.65rem; font-size:22px; font-weight:500; letter-spacing:-.03em; }
+.filter-wrap { display:flex; flex-wrap:wrap; justify-content:flex-end; align-items:center; gap:.45rem; color:#788481; font-size:11px; }
+.filter-button { border:1px solid #CFC4B5; padding:.6rem .85rem; background:transparent; color:#788481; font:inherit; cursor:pointer; }
+.filter-button.active, .filter-button:hover { background:#122B3A; border-color:#122B3A; color:#F4EFE7; }
+.timeline-list { margin-top:1rem; }
+.timeline-item { display:grid; grid-template-columns:100px 18px minmax(0,1fr); gap:1.25rem; padding:2.25rem 0; border-bottom:1px solid rgba(18,43,58,.13); }
+.timeline-year { padding-top:.25rem; color:#B96B4B; font-size:12px; font-weight:800; letter-spacing:.1em; }
+.timeline-marker { position:relative; display:flex; justify-content:center; }
+.timeline-marker:before { content:""; display:block; width:10px; height:10px; margin-top:.4rem; border:2px solid #B96B4B; border-radius:50%; background:#F4EFE7; z-index:1; }
+.timeline-marker:after { content:""; position:absolute; top:1.2rem; bottom:-2.5rem; width:1px; background:#CFC4B5; }
+.timeline-item:last-child .timeline-marker:after { display:none; }
+.timeline-meta { display:flex; align-items:center; justify-content:space-between; color:#788481; font-size:10px; font-weight:800; letter-spacing:.12em; text-transform:uppercase; }
+.timeline-meta button, .journal-card > button { display:flex; align-items:center; justify-content:center; width:34px; height:34px; border:1px solid #CFC4B5; border-radius:50%; background:transparent; color:#122B3A; transition:transform .18s ease, background .18s ease; }
+.timeline-item.open .timeline-meta button, .journal-card.open > button { background:#B96B4B; border-color:#B96B4B; transform:rotate(180deg); }
+.timeline-content h2 { max-width:680px; margin:.8rem 0 .6rem; font-size:clamp(1.8rem,3vw,3.2rem); line-height:.95; letter-spacing:-.06em; font-weight:500; }
+.timeline-content > p { max-width:640px; margin:0; color:#66716F; font-size:16px; line-height:1.55; }
+.timeline-detail { max-width:680px; margin-top:1.3rem; padding:1.2rem 1.4rem; border-left:2px solid #B96B4B; background:rgba(255,255,255,.5); }
+.timeline-detail p { margin:0 0 .7rem; line-height:1.6; }
+.timeline-detail span { color:#B96B4B; font-size:10px; font-weight:800; letter-spacing:.08em; text-transform:uppercase; }
+.archive-empty { display:flex; justify-content:space-between; gap:2rem; margin-top:4rem; padding:1.5rem 0; border-top:1px solid #CFC4B5; color:#66716F; font-size:13px; }
+.archive-empty strong { color:#17232B; font-size:16px; font-weight:600; }
+.archive-empty span { max-width:360px; }
+.journal-hero { background:#F4EFE7; color:#17232B; border-bottom:1px solid #CFC4B5; }
+.journal-hero .back-link { color:#17232B; }
+.journal-hero .back-link:hover { color:#B96B4B; }
+.journal-hero .archive-intro p { color:#66716F; }
+.journal-card { display:grid; grid-template-columns:84px minmax(0,1fr) 42px; gap:1.5rem; align-items:start; padding:2.25rem 0; border-bottom:1px solid rgba(18,43,58,.16); }
+.journal-number { color:#B96B4B; font-size:12px; font-weight:800; letter-spacing:.1em; }
+.journal-tag { color:#B96B4B; font-size:10px; font-weight:800; letter-spacing:.13em; text-transform:uppercase; }
+.journal-card h2 { max-width:800px; margin:.65rem 0 .55rem; font-size:clamp(2rem,4vw,4rem); line-height:.92; letter-spacing:-.065em; font-weight:500; }
+.journal-card-main > p { max-width:670px; margin:0; color:#66716F; font-size:17px; line-height:1.5; }
+.journal-body { max-width:700px; margin-top:1.25rem; padding:1.25rem 1.5rem; background:#fff; border-left:2px solid #B96B4B; }
+.journal-body p { margin:0 0 .8rem; line-height:1.65; }
+.journal-body span { color:#B96B4B; font-size:10px; font-weight:800; letter-spacing:.1em; text-transform:uppercase; }
+.journal-footer-note { display:flex; justify-content:space-between; gap:2rem; margin-top:3rem; padding-top:1.4rem; border-top:1px solid #CFC4B5; color:#66716F; font-size:13px; }
+.journal-footer-note a { display:inline-flex; align-items:center; gap:.35rem; color:#17232B; font-weight:800; text-decoration:none; }
+.journal-footer-note a:hover { color:#B96B4B; }
+.archive-footer { padding:3rem 0; background:#122B3A; color:#F4EFE7; }
+.archive-footer-inner { display:flex; justify-content:space-between; gap:2rem; }
+.archive-footer img { width:92px; filter:brightness(0) invert(1); }
+.archive-footer p { max-width:250px; color:rgba(244,239,231,.65); font-size:12px; line-height:1.5; }
+.archive-footer-links { display:flex; flex-wrap:wrap; align-items:flex-start; gap:1.3rem; }
+.archive-footer-links a { display:flex; align-items:center; gap:.4rem; color:#F4EFE7; font-size:11px; font-weight:800; letter-spacing:.1em; text-decoration:none; text-transform:uppercase; }
+.archive-footer-links a:hover { color:#D18A63; }
+@media (max-width:760px) { .archive-topline { padding:.55rem 1rem; font-size:8px; } .archive-topline span:last-child { display:none; } .archive-nav { min-height:70px; gap:1rem; padding-left:1rem; padding-right:1rem; } .archive-brand img { width:68px; } .archive-nav nav { gap:1rem; } .archive-nav nav a { font-size:9px; letter-spacing:.06em; } .archive-social { display:none; } .archive-hero { padding:4.5rem 0 4rem; } .archive-hero-grid { grid-template-columns:1fr; gap:2.5rem; } .back-link { margin-bottom:2.5rem; } .archive-intro { max-width:420px; } .archive-intro p { font-size:16px; } .archive-list-section, .journal-list-section { padding:3.5rem 0 5rem; } .archive-toolbar, .archive-empty, .journal-footer-note, .archive-footer-inner { align-items:flex-start; flex-direction:column; } .filter-wrap { justify-content:flex-start; } .timeline-item { grid-template-columns:54px 12px minmax(0,1fr); gap:.75rem; } .timeline-content h2 { font-size:1.8rem; } .timeline-content > p, .journal-card-main > p { font-size:15px; } .journal-card { grid-template-columns:34px minmax(0,1fr) 34px; gap:.7rem; } .journal-card h2 { font-size:2rem; } .archive-footer-links { gap:1rem; } }
