@@ -25,3 +25,9 @@ The first direction is the strongest fit for Raphael Drones because the deep nav
 ## Change status
 
 No website code or theme was changed during this review.
+
+## Vayal Vimaani app and service verification
+
+The public Vayal Vimani site describes a farmer-first, on-demand drone spraying service, with crop spraying, certified pilots, and field-focused operations. Its visible CTAs are booking/contact actions; no Play Store or Apple App Store download links were visible in the extracted public page content. A public LinkedIn milestone post from Raphael Drones And GIS Services states that the first demo launch of the Vayal Vimaani application was officially published, but the post does not expose store URLs in its accessible content.
+
+Implementation implication: add Play Store and App Store buttons only when the official URLs are supplied or discovered from the official listings. Do not invent deep links. Until then, keep a minimal enquiry/call action for Vayal Vimaani.

@@ -51,3 +51,19 @@
 - [x] Add agriculture, field-work, and other-purpose applications beyond spraying.
 - [x] Add drone pilot licensing and certification support for small to larger drone categories, using the supplied RPTO/RPO context.
 - [x] Verify the expanded information architecture and save a new checkpoint.
+
+## RPTO and app actions update
+
+- [x] Correct the wording to Remote Pilot Training Organisation (RPTO).
+- [x] Make the primary offerings more prominent with minimal, high-impact content.
+- [x] Keep enquiry and call actions concise and easy to use.
+- [x] Verify official Vayal Vimaani Play Store and App Store links before adding redirects.
+- [x] Add official organization/store icons in SVG-compatible form.
+- [x] Verify the updated buttons and save a new checkpoint.
+
+## Minimal optimistic refinement
+
+- [x] Keep the interface minimal, optimistic, and easy to understand.
+- [x] Reduce Vayal Vimaani content to a simple service explanation and clear actions.
+- [x] Add Play Store and App Store SVG icons with `#` placeholder links only.
+- [x] Keep enquiry and call actions concise and verify the result before checkpointing.
