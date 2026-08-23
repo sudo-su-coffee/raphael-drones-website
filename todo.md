@@ -114,3 +114,8 @@
 - [x] Remove the non-essential Founder item from the primary menu while keeping Gallery and Journal visible.
 - [x] Add tasteful entrance, hover, and image motion with reduced-motion support.
 - [x] Verify desktop/mobile navigation and motion, then save the final checkpoint.
+
+## Four-name menu patch
+
+- [x] Set the homepage primary menu to exactly four names, including Gallery and Journal.
+- [x] Verify the four-name menu on desktop and mobile, then save the checkpoint.
