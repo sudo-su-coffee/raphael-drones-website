@@ -29,3 +29,16 @@
 - [x] Add an authentic CEO & Founder section using only confirmed company context and the supplied portrait.
 - [x] Verify the portrait crop, contrast, accessibility text, and responsive layout.
 - [x] Save and deliver the founder update checkpoint.
+
+## No-change domain and color review
+
+- [ ] Check `rapheldrones.com` and `raphaeldrones.com` to identify the live public site.
+- [ ] Identify the logo’s blue highlight and assess whether it should remain logo-only.
+- [ ] Recommend premium UI accent alternatives without modifying the project.
+
+## Approved palette pass
+
+- [x] Use palette 01: Deep Navy, Sand, Copper, and Antique Gold.
+- [x] Make the chosen palette feel uniquely Raphael Drones rather than a generic color swap.
+- [x] Add standout visual details while keeping the logo’s original blue limited to the logo.
+- [x] Verify desktop/mobile presentation and save the updated checkpoint.
