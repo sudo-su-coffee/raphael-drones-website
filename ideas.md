@@ -1,68 +1,53 @@
-# Raphael Drones redesign — design exploration
+# Raphael Drones redesign — second rebuild direction
 
-## Approach 1 — Field Notes / Modern Agronomy
-A warm, editorial identity that pairs documentary aerial photography with precise field-report structure. It feels grounded, credible, and quietly premium rather than like a generic tech startup.
+## Design direction: Clear Signal
 
-Probability: 0.07
+### Design Movement
+Logo-led Swiss-inspired product design with a practical aviation interface: clean alignment, strong hierarchy, generous space, and one unmistakable cyan signal color pulled from the Raphael Drones mark.
 
-## Approach 2 — Mission Control / Night Signal
-A dark, high-contrast operations-room aesthetic with live-signal cues, tactical typography, and restrained orange instrumentation. It positions the company as an always-on intelligence layer for critical field decisions.
+### Core Principles
+1. **Clarity first:** The first screen explains who Raphael Drones is, what it does, and where to enquire without visual noise.
+2. **Logo as anchor:** The provided drone logo is the primary brand asset and should be legible in the header, hero, footer, and small utility contexts.
+3. **Large content moments:** Use oversized headlines, broad sections, strong imagery, and short readable paragraphs so the site feels larger and easier to scan.
+4. **Fast by default:** Avoid unnecessary animation, heavy overlays, decorative effects, and excessive interaction. Make every element earn its place.
 
-Probability: 0.03
+### Color Philosophy
+The user-provided logo establishes a bright cyan as the brand signal against black and white. White and soft gray create a clean technical canvas, deep near-black provides confidence and contrast, and cyan is used for primary actions, active states, and key visual markers. This makes the brand feel more modern while staying faithful to the supplied logo.
 
-## Approach 3 — Topographic Modernism
-A tactile, sunlit system inspired by survey maps, contour lines, and agricultural materials. It uses off-white paper, ink-black type, sage field tones, and safety orange to turn technical capability into a clear, human brand.
+### Layout Paradigm
+A simple top navigation with a broad hero, followed by a three-column services overview, a split about section, a large capabilities band, and a clear contact call-to-action. Use asymmetry through image placement and text width, not through complicated UI patterns.
 
-Probability: 0.08
+### Signature Elements
+- The full provided drone logo displayed large and clearly, never hidden inside a tiny generic icon.
+- Cyan “flight path” lines and small locator dots as restrained graphic accents.
+- Black-and-white image treatment with cyan highlights for a faster, more coherent visual system.
 
-# Chosen direction — Field Notes / Modern Agronomy
+### Interaction Philosophy
+Interactions are direct and low-friction. Navigation scrolls to content, buttons have clear hover/active feedback, service cards expose a short detail, and the contact area uses real email/location links from the source content. No theatrical loading or decorative motion that slows comprehension.
 
-## Design Movement
-Contemporary editorial modernism rooted in Indian agronomy, cartography, and industrial field documentation. The interface should feel like a beautifully designed survey report that happens to be interactive.
+### Animation
+Only use short opacity/transform transitions under 220ms for hover and menu states. Respect reduced motion. Keep the first render immediate and avoid scroll-triggered animation that makes the page feel slower.
 
-## Core Principles
-1. **Evidence over hype:** Show the work through specific outcomes, field imagery, and measurable service language.
-2. **Editorial asymmetry:** Use offset columns, annotated media, and a strong left rail instead of a centered startup template.
-3. **Tactile precision:** Pair paper-like surfaces, hairline rules, coordinate labels, and contour motifs with sharp digital interactions.
-4. **Quiet confidence:** Keep the palette restrained, use whitespace deliberately, and reserve the accent for actions and important signals.
+### Typography System
+Use **Manrope** for all interface and body copy for a clean, contemporary reading experience. Use **Space Grotesk** for large display headings and numeric labels. Keep headings bold and compact, paragraphs short, and metadata uppercase with modest tracking.
 
-## Color Philosophy
-Warm ivory is the base: it makes the site feel like a field notebook rather than a software dashboard. Ink black carries authority and keeps the copy highly legible. Deep forest and muted sage connect the company to cultivation, terrain, and sustainable practice. Safety orange is the signature signal color: used sparingly for calls to action, active markers, and moments that need to move.
+### Brand Essence
+**Raphael Drones makes aerial technology practical — through drone solutions, GIS, training, and precision agriculture built for real teams in India.**
 
-## Layout Paradigm
-A left-anchored editorial composition with a persistent top navigation, a hero split into narrative and image, and sections that alternate between broad horizontal field notes and narrow annotated columns. Content should feel discovered along a route rather than stacked as identical cards. Use large media blocks and small coordinate labels to create rhythm.
+Personality: clear, capable, forward-looking.
 
-## Signature Elements
-- Fine coordinate ticks, field-note labels, and short rule lines around section headings.
-- Contour-line / scan-path textures used as quiet background signals, never as decoration for its own sake.
-- Orange locator dots and small data tags that make the page feel surveyed and active.
+### Brand Voice
+Use simple, confident language. Prefer “What we do” over “Our ecosystem” and “Talk to our team” over inflated promises.
 
-## Interaction Philosophy
-Interactions should feel like handling a well-made instrument: immediate, tactile, and legible. Buttons nudge on press, images lift slightly on hover, navigation links reveal a short orange rule, and cards disclose their detail without theatrical effects. Every interactive element should answer the question: “what does this help me decide?”
+Example headline: “Better decisions start with a better view.”
 
-## Animation
-Use short, snappy transitions under 280ms with a custom ease-out. On first load, reveal the hero copy and image in a staggered 40–70ms sequence. Allow small locator dots and contour strokes to drift subtly only when reduced motion is not preferred. Keep hover motion to transform and opacity; no bouncing, looping, or attention-seeking parallax.
+Example CTA: “Talk to our team.”
 
-## Typography System
-Use **DM Sans** for body copy, navigation, UI, and metadata: highly legible with a modern humanist rhythm. Use **Space Grotesk** for display headlines and large numeric statements: technical without becoming cold. Headlines are tight and weighty, body copy is relaxed at 1.6 line-height, and metadata is uppercase with generous tracking.
+### Wordmark & Logo
+Use the user-provided full logo artwork as the source of truth. Preserve its drone silhouette, cyan accents, and Raphael Drones wordmark. Display it on white backgrounds in the header and use the supplied white variant on dark sections where available.
 
-## Brand Essence
-**Raphael Drones turns aerial data into decisions people can act on — for farms, infrastructure, and the field teams responsible for both.**
+### Signature Brand Color
+**Raphael Cyan — #5DE7E6**, sampled visually from the provided logo. Use it for primary CTA fills, active navigation markers, and small flight-path accents.
 
-Personality: observant, capable, grounded.
-
-## Brand Voice
-Headlines are direct, visual, and outcome-led. CTAs sound like a confident next step rather than a sales pitch. Microcopy is specific, concise, and free of inflated claims.
-
-Example headline: “See the field before the field sees you.”
-
-Example CTA: “Map a better next move.”
-
-## Wordmark & Logo
-The mark is a compact quadcopter crossed with a single topographic contour and a radar notch. It should read as an aerial instrument at small size, with a geometric silhouette that feels engineered but not sterile. The wordmark uses a custom-tuned wide grotesk treatment with an intentional cut in the “A” to echo the mark; never present the brand name in a default browser font.
-
-## Signature Brand Color
-**Survey Orange — #F26B3A.** It is warm enough to feel human and visible enough to act as an unmistakable field marker against ivory, ink, and forest.
-
-## File-level reminder
-All front-end files should reinforce this direction: editorial asymmetry, warm field-note surfaces, Space Grotesk + DM Sans, deep forest/ink/ivory with Survey Orange as a signal, and interaction patterns that feel precise rather than flashy.
+### Source content to reuse
+The supplied package identifies these service areas: agricultural drone spraying, indoor mapping, GIS and LiDAR work, drone training programs, drone light shows, product purchase, and enquiry booking. It also provides contact emails including `support@raphaeldrones.com`, `info@raphaeldrones.com`, and `raphaeldrones@gmail.com`, plus the Perumalpatti, Tenkasi, Tamil Nadu address. Company profile context from LinkedIn: Rajapalayam, Tamil Nadu; founded in 2024; 2–10 employees; aviation and aerospace component manufacturing.
