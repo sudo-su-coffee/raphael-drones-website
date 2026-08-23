@@ -91,3 +91,12 @@
 - [x] Generate a realistic training visual showing practical drone pilot learning and field readiness.
 - [x] Integrate the visual into the RPTO section without reusing it elsewhere.
 - [x] Verify crop, contrast, accessibility text, and mobile layout before checkpointing.
+
+## Gallery lightbox, Journal index, and repository delivery
+
+- [x] Add Gallery titles, summaries, categories, and image-backed cards for verified work and training.
+- [x] Add an accessible image lightbox for uploaded/generated gallery visuals.
+- [x] Expand the Journal into one central list for official company posts, MoUs, milestones, training, and future company updates.
+- [x] Keep official claims clearly identified and do not fabricate events, reviews, or testimonials.
+- [x] Audit homepage, Gallery, Journal, mobile layout, links, and build output.
+- [x] Create a private GitHub repository and push the finalized project.
