@@ -325,3 +325,9 @@
 .vayal-brand span { display:block; color:#F4EFE7; font-size:10px; font-weight:800; letter-spacing:.12em; text-transform:uppercase; }
 .vayal-panel-top { align-items:center; }
 @media (max-width:620px) { .vayal-brand img { width:36px; height:36px; } .vayal-brand span { font-size:8px; letter-spacing:.08em; } }
+
+/* VAYAL ORBIT MARK — The full service logo is the central visual, with the orbit rings retained as framing. */
+.vayal-orbit-logo { position:relative; z-index:2; width:116px; height:116px; object-fit:contain; border-radius:50%; background:#F4EFE7; padding:10px; box-shadow:0 10px 26px rgba(18,43,58,.22); }
+.vayal-orbit .orbit-line { z-index:1; }
+.vayal-orbit .orbit-dot { z-index:3; }
+@media (max-width:620px) { .vayal-orbit-logo { width:96px; height:96px; padding:8px; } }

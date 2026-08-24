@@ -141,3 +141,10 @@
 - [x] Reframe the card around Crop spraying, Field work, and subsidy-support guidance.
 - [x] Add a simple inline SVG-style Vayal Vimaani mark in the card without needing the laptop SVG file.
 - [x] Verify the updated card on desktop/mobile and save a new checkpoint.
+
+## Exact Vayal logo placement patch
+
+- [x] Remove the small Vayal logo from the card’s top header row.
+- [x] Replace the central orbit-ring “V” marker with the full Vayal Vimaani logo.
+- [x] Preserve the rings and numbered service points below the central logo.
+- [x] Verify the final card on desktop/mobile and save a checkpoint.
