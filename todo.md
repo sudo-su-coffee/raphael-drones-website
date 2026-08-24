@@ -148,3 +148,12 @@
 - [x] Replace the central orbit-ring “V” marker with the full Vayal Vimaani logo.
 - [x] Preserve the rings and numbered service points below the central logo.
 - [x] Verify the final card on desktop/mobile and save a checkpoint.
+
+## Vayal Vimaani standalone site
+
+- [x] Create a dedicated `/vayal` route inside the existing Raphael Drones project and keep the main Raphael site intact.
+- [x] Use the public Vayal Vimaani identity and farmer-first positioning as the content baseline.
+- [x] Generate a strong field-spraying hero visual and supporting agricultural imagery/animation.
+- [x] Build a simple booking-focused homepage with crop spraying, field work, subsidy guidance, certified-pilot messaging, and clear call/WhatsApp actions.
+- [x] Add mobile accessibility, readable typography, Tamil Nadu context, reduced-motion support, and official-logo safeguards.
+- [x] Audit desktop/mobile, run build checks, checkpoint, and push the completed route to GitHub `main`.
