@@ -134,3 +134,10 @@
 - [x] Add refined hover/focus states for Gallery cards, thumbnails, and Journal rows.
 - [x] Respect reduced-motion preferences and keep interactions lightweight.
 - [x] Verify desktop/mobile behavior, run checks, and save a new checkpoint.
+
+## Vayal Vimaani card refinement
+
+- [x] Inspect the public Vayal Vimaani site for relevant content and visible brand treatment.
+- [x] Reframe the card around Crop spraying, Field work, and subsidy-support guidance.
+- [x] Add a simple inline SVG-style Vayal Vimaani mark in the card without needing the laptop SVG file.
+- [x] Verify the updated card on desktop/mobile and save a new checkpoint.

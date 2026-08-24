@@ -318,3 +318,10 @@
 .journal-card > button:hover, .journal-card > button:focus-visible { transform:rotate(-18deg); background:#B96B4B; color:#122B3A; }
 .timeline-thumb:focus-visible, .journal-card > button:focus-visible, .filter-button:focus-visible, .lightbox-nav:focus-visible { outline:2px solid #B96B4B; outline-offset:3px; }
 @media (prefers-reduced-motion: reduce) { .timeline-item, .journal-card { animation:none; } .timeline-thumb, .timeline-thumb img, .timeline-item, .journal-card, .journal-card > button { transition:none; } }
+
+/* VAYAL VIMAANI CARD — Use the public service mark as a compact, farmer-first brand signal. */
+.vayal-brand { display:flex; align-items:center; gap:.7rem; min-width:0; }
+.vayal-brand img { width:42px; height:42px; object-fit:contain; border-radius:10px; background:#F4EFE7; padding:4px; }
+.vayal-brand span { display:block; color:#F4EFE7; font-size:10px; font-weight:800; letter-spacing:.12em; text-transform:uppercase; }
+.vayal-panel-top { align-items:center; }
+@media (max-width:620px) { .vayal-brand img { width:36px; height:36px; } .vayal-brand span { font-size:8px; letter-spacing:.08em; } }
