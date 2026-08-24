@@ -127,3 +127,10 @@
 - [x] Add Journal featured-post hierarchy, cleaner reading previews, and clearer official-update labels.
 - [x] Improve Journal filtering, in-page reading controls, and next/previous content flow.
 - [x] Verify both routes on desktop/mobile and save a new checkpoint.
+
+## Archive motion enhancement
+
+- [x] Add smooth scroll-reveal animation to Gallery image cards and Journal entries.
+- [x] Add refined hover/focus states for Gallery cards, thumbnails, and Journal rows.
+- [x] Respect reduced-motion preferences and keep interactions lightweight.
+- [x] Verify desktop/mobile behavior, run checks, and save a new checkpoint.
