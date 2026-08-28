@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us — SkyPilot</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800&family=Hanken+Grotesk:wght@400;600;700&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared.css">
+<style>
+  .story {
+    padding: 96px 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .story__eyebrow {
+    font-family: var(--font-mono);
+    font-size: 14px;
+    color: var(--cyan);
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+
+  .story__quote {
+    font-family: var(--font-display);
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 1.5;
+    color: #fff;
+  }
+
+  .story__brand {
+    color: var(--cyan);
+  }
+
+  /* ── Stats ────────────────────────────────────────── */
+  .stats {
+    padding: 64px 40px 96px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+    text-align: center;
+  }
+
+  @media (max-width: 800px) {
+    .stats { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  .stats__number {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 48px;
+    color: var(--cyan-bright);
+  }
+
+  .stats__label {
+    margin-top: 8px;
+    font-size: 14px;
+    color: var(--text-body);
+  }
+
+  /* ── Partner logos placeholder strip ───────────────── */
+  .partner-strip {
+    padding: 40px;
+    max-width: 1400px;
+    margin: 0 auto 64px;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    justify-content: center;
+    gap: 48px;
+    flex-wrap: wrap;
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+
+  .partner-strip__item {
+    font-family: var(--font-mono);
+    font-size: 13px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--text-fainter);
+  }
+
+  /* ── Mission image placeholder ─────────────────────── */
+  .mission-image {
+    max-width: 1000px;
+    margin: 0 auto 96px;
+    padding: 0 40px;
+  }
+
+  .mission-image__frame {
+    aspect-ratio: 16 / 9;
+    border-radius: 16px;
+    border: 1px solid var(--border);
+    background: linear-gradient(155deg, #14181a, #0a0b0c 60%, #0d0e0f);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-fainter);
+    font-family: var(--font-mono);
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  /* ── Contact ─────────────────────────────────────── */
+  .contact {
+    padding: 0 40px 96px;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .contact__panel {
+    background: rgba(13,14,15,0.6);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 48px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+  }
+
+  @media (max-width: 800px) {
+    .contact__panel { grid-template-columns: 1fr; }
+  }
+
+  .contact__block-label {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--cyan);
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+
+  .contact__block-body {
+    font-family: var(--font-display);
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--text-heading);
+    line-height: 1.6;
+  }
+</style>
+</head>
+<body>
+
+  <header class="nav">
+    <div class="nav__logo">SKYPILOT</div>
+    <nav class="nav__links">
+      <a href="skypilot-landing.html">Home</a>
+      <a href="about-us.html" aria-current="page">About Us</a>
+      <a href="skypilot-landing.html#fly">Fly Now</a>
+    </nav>
+    <a class="nav__cta" href="#contact">Contact us</a>
+  </header>
+
+  <!-- Story -->
+  <section class="story">
+    <p class="story__eyebrow">Our Story</p>
+    <p class="story__quote">
+      <span class="story__brand">Raphael Drones</span> stands as proof that even with limited
+      resources, if the vision is clear and the heart is strong, you can build something
+      that touches lives.
+    </p>
+  </section>
+
+  <!-- Stats -->
+  <section class="stats">
+    <div>
+      <p class="stats__number">200+</p>
+      <p class="stats__label">DGCA Certified Pilots Trained</p>
+    </div>
+    <div>
+      <p class="stats__number">100+</p>
+      <p class="stats__label">Organizations Trained</p>
+    </div>
+    <div>
+      <p class="stats__number">3</p>
+      <p class="stats__label">Countries</p>
+    </div>
+    <div>
+      <p class="stats__number">3,500+</p>
+      <p class="stats__label">Pilots Trained</p>
+    </div>
+  </section>
+
+  <!-- Partner logos strip -->
+  <section class="partner-strip">
+    <span class="partner-strip__item">Partner Org 1</span>
+    <span class="partner-strip__item">Partner Org 2</span>
+    <span class="partner-strip__item">Partner Org 3</span>
+    <span class="partner-strip__item">Partner Org 4</span>
+    <span class="partner-strip__item">Partner Org 5</span>
+  </section>
+
+  <!-- Mission image placeholder -->
+  <section class="mission-image">
+    <div class="mission-image__frame">Field training photo</div>
+  </section>
+
+  <!-- Contact -->
+  <section class="contact" id="contact">
+    <div class="contact__panel">
+      <div>
+        <p class="contact__block-label">Phone</p>
+        <p class="contact__block-body">+91 866 76 76 987</p>
+      </div>
+      <div>
+        <p class="contact__block-label">Email</p>
+        <p class="contact__block-body">support@raphaeldrones.com</p>
+      </div>
+      <div>
+        <p class="contact__block-label">Address</p>
+        <p class="contact__block-body">
+          2/197A, Main Road<br>
+          Perumalpatti, Tenkasi<br>
+          Tamil Nadu 627753<br>
+          India
+        </p>
+      </div>
+      <div style="grid-column: 1 / -1;">
+        <p class="contact__block-label">Business Hours</p>
+        <p class="contact__block-body">
+          Mon – Fri: 9:00 AM – 6:00 PM &nbsp;·&nbsp;
+          Sat: 10:00 AM – 4:00 PM &nbsp;·&nbsp;
+          Sun: Closed
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer__pre">
+      <p class="footer__pre-title">Redefine the Sky with SkyPilot</p>
+      <p class="footer__pre-body">Explore our AI-powered drones for photography, delivery, and more.</p>
+    </div>
+    <div class="footer__columns">
+      <div class="footer__column">
+        <p class="footer__column-title">Resources</p>
+        <a href="#">User Guides</a>
+        <a href="#">FAQs</a>
+        <a href="#">Blog</a>
+        <a href="#">Support</a>
+      </div>
+      <div class="footer__column">
+        <p class="footer__column-title">Company</p>
+        <a href="about-us.html">About Us</a>
+        <a href="#">Our Mission</a>
+        <a href="#">Careers</a>
+      </div>
+      <div class="footer__column">
+        <p class="footer__column-title">Connect</p>
+        <a href="#">Twitter</a>
+        <a href="#">Instagram</a>
+        <a href="#">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

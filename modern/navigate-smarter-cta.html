@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Navigate Smarter — SkyPilot</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Hanken+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --blue: #007bff;
+    --font-display: 'Orbitron', sans-serif;
+    --font-body: 'Hanken Grotesk', sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: #fff;
+    color: #000;
+    font-family: var(--font-body);
+  }
+  a { color: inherit; text-decoration: none; }
+  button { font-family: inherit; cursor: pointer; border: none; }
+
+  .panel {
+    max-width: 1312px;
+    margin: 40px auto;
+    padding: 0 24px;
+  }
+
+  .panel__inner {
+    position: relative;
+    border-radius: 24px;
+    background: linear-gradient(135deg, #0d47a1, #1565c0 45%, #0d47a1);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+    padding: 56px 64px;
+  }
+
+  .panel__inner::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(circle at 15% 20%, rgba(255,255,255,0.12), transparent 40%),
+      radial-gradient(circle at 85% 80%, rgba(255,255,255,0.1), transparent 45%);
+  }
+
+  .panel__content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    max-width: 560px;
+  }
+
+  .panel__heading {
+    font-family: var(--font-display);
+    font-weight: 900;
+    font-size: 48px;
+    line-height: 1.25;
+    color: #fff;
+  }
+
+  .panel__btn {
+    align-self: flex-start;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: #fff;
+    border-radius: 12px;
+    padding: 16px 24px;
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 16px;
+    color: #000;
+    transition: transform 0.2s ease;
+  }
+  .panel__btn:hover { transform: translateX(4px); }
+  .panel__btn svg { width: 18px; height: 18px; }
+
+  .panel__art {
+    position: relative;
+    z-index: 1;
+    flex-shrink: 0;
+    width: 320px;
+    height: 220px;
+    border-radius: 16px;
+    background: linear-gradient(155deg, rgba(255,255,255,0.18), rgba(255,255,255,0.04));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255,255,255,0.6);
+    font-family: monospace;
+    font-size: 12px;
+    text-align: center;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  /* Logo row (from the "See more" strip below the CTA in Figma) */
+  .logos {
+    max-width: 1312px;
+    margin: 0 auto 64px;
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    flex-wrap: wrap;
+  }
+
+  .logos__item {
+    height: 60px;
+    width: 118px;
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #999;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .logos__more {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--blue);
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 16px;
+  }
+
+  @media (max-width: 800px) {
+    .panel__inner { flex-direction: column; padding: 40px 32px; }
+    .panel__art { width: 100%; }
+  }
+</style>
+</head>
+<body>
+
+  <section class="panel">
+    <div class="panel__inner">
+      <div class="panel__content">
+        <h1 class="panel__heading">Navigate Smarter, Unlock the Skies.</h1>
+        <button class="panel__btn">
+          Go &amp; Get it!
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </button>
+      </div>
+      <div class="panel__art">Drone illustration</div>
+    </div>
+  </section>
+
+  <section class="logos">
+    <div class="logos__item">Logo 1</div>
+    <div class="logos__item">Logo 2</div>
+    <div class="logos__item">Logo 3</div>
+    <a href="partners.html" class="logos__more">See more →</a>
+  </section>
+
+</body>
+</html>

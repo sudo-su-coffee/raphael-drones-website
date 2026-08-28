@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Partners — SkyPilot</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800&family=Hanken+Grotesk:wght@400;600;700&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared.css">
+<style>
+  .page-title {
+    padding: 40px 40px 0;
+    max-width: 1400px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .page-title h1 {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 40px;
+    color: #fff;
+  }
+
+  .page-title p {
+    margin-top: 12px;
+    color: var(--text-body);
+    font-size: 16px;
+  }
+
+  /* ── Big stat statement ─────────────────────────── */
+  .stat-statement {
+    padding: 80px 40px;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 48px;
+  }
+
+  @media (max-width: 700px) {
+    .stat-statement { grid-template-columns: 1fr; }
+  }
+
+  .stat-statement__number {
+    font-family: var(--font-display);
+    font-weight: 400;
+    font-size: 64px;
+    color: #fff;
+    line-height: 1;
+  }
+
+  .stat-statement__label {
+    margin-top: 12px;
+    font-size: 15px;
+    color: var(--text-body);
+  }
+
+  /* ── Logo grid placeholder ──────────────────────── */
+  .logo-grid {
+    padding: 64px 40px;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  .logo-grid__title {
+    text-align: center;
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: 24px;
+    color: var(--text-heading);
+    margin-bottom: 40px;
+  }
+
+  .logo-grid__row {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 24px;
+  }
+
+  @media (max-width: 800px) {
+    .logo-grid__row { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  .logo-grid__item {
+    aspect-ratio: 3 / 1.4;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255,255,255,0.02);
+    color: var(--text-fainter);
+    font-family: var(--font-mono);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  /* ── Field photo strip ──────────────────────────── */
+  .field-photo {
+    padding: 40px;
+    max-width: 1400px;
+    margin: 0 auto 64px;
+  }
+
+  .field-photo__frame {
+    aspect-ratio: 21 / 9;
+    border-radius: 16px;
+    border: 1px solid var(--border);
+    background: linear-gradient(155deg, #14181a, #0a0b0c 60%, #0d0e0f);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-fainter);
+    font-family: var(--font-mono);
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+</style>
+</head>
+<body>
+
+  <header class="nav">
+    <div class="nav__logo">SKYPILOT</div>
+    <nav class="nav__links">
+      <a href="skypilot-landing.html">Home</a>
+      <a href="about-us.html">About Us</a>
+      <a href="skypilot-landing.html#fly">Fly Now</a>
+    </nav>
+    <a class="nav__cta" href="about-us.html#contact">Contact us</a>
+  </header>
+
+  <section class="page-title">
+    <h1>Our Partners</h1>
+    <p>Organizations and institutions we've trained, equipped, and flown alongside.</p>
+  </section>
+
+  <!-- Big stat statement -->
+  <section class="stat-statement">
+    <div>
+      <p class="stat-statement__number">200+</p>
+      <p class="stat-statement__label">DGCA Certified Pilots Trained</p>
+    </div>
+    <div>
+      <p class="stat-statement__number">100+</p>
+      <p class="stat-statement__label">Organizations Trained</p>
+    </div>
+    <div>
+      <p class="stat-statement__number">3</p>
+      <p class="stat-statement__label">Countries</p>
+    </div>
+    <div>
+      <p class="stat-statement__number">3,500+</p>
+      <p class="stat-statement__label">Pilots Trained</p>
+    </div>
+  </section>
+
+  <!-- Partner logo grid -->
+  <section class="logo-grid">
+    <p class="logo-grid__title">Trusted by teams across agriculture, defense, and logistics</p>
+    <div class="logo-grid__row">
+      <div class="logo-grid__item">Partner 1</div>
+      <div class="logo-grid__item">Partner 2</div>
+      <div class="logo-grid__item">Partner 3</div>
+      <div class="logo-grid__item">Partner 4</div>
+      <div class="logo-grid__item">Partner 5</div>
+    </div>
+  </section>
+
+  <!-- Field photo -->
+  <section class="field-photo">
+    <div class="field-photo__frame">Training program photo</div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer__pre">
+      <p class="footer__pre-title">Redefine the Sky with SkyPilot</p>
+      <p class="footer__pre-body">Explore our AI-powered drones for photography, delivery, and more.</p>
+    </div>
+    <div class="footer__columns">
+      <div class="footer__column">
+        <p class="footer__column-title">Resources</p>
+        <a href="#">User Guides</a>
+        <a href="#">FAQs</a>
+        <a href="#">Blog</a>
+        <a href="#">Support</a>
+      </div>
+      <div class="footer__column">
+        <p class="footer__column-title">Company</p>
+        <a href="about-us.html">About Us</a>
+        <a href="#">Our Mission</a>
+        <a href="#">Careers</a>
+      </div>
+      <div class="footer__column">
+        <p class="footer__column-title">Connect</p>
+        <a href="#">Twitter</a>
+        <a href="#">Instagram</a>
+        <a href="#">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

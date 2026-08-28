@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SkyPilot — Redefine the Sky</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600;700;800&family=Hanken+Grotesk:wght@400;700&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0d0e0f;
+    --border: rgba(60,73,77,0.3);
+    --blue: #007bff;
+    --cyan: #aeecff;
+    --cyan-bright: #00d8ff;
+    --text-body: #bbc9ce;
+    --text-heading: #e3e2e2;
+    --text-faint: rgba(255,255,255,0.75);
+    --text-fainter: rgba(255,255,255,0.5);
+    --font-display: 'Orbitron', sans-serif;
+    --font-body: 'Hanken Grotesk', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: #fff;
+    font-family: var(--font-body);
+    line-height: 1.5;
+  }
+
+  a { color: inherit; text-decoration: none; }
+
+  button { font-family: inherit; cursor: pointer; border: none; }
+
+  img { max-width: 100%; display: block; }
+
+  .wrap {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 40px;
+  }
+
+  /* Focus visibility */
+  a:focus-visible, button:focus-visible {
+    outline: 2px solid var(--cyan);
+    outline-offset: 3px;
+  }
+
+  /* ── Nav ─────────────────────────────────────────── */
+  .nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 40px;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  .nav__logo {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 20px;
+    letter-spacing: 0.05em;
+  }
+
+  .nav__links {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    font-family: var(--font-display);
+    font-weight: 500;
+    font-size: 14px;
+    color: var(--text-faint);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .nav__links a { transition: color 0.2s ease; }
+  .nav__links a:hover { color: #fff; }
+
+  .nav__cta {
+    border: 1px solid var(--blue);
+    border-radius: 999px;
+    padding: 10px 24px;
+    font-family: var(--font-display);
+    font-weight: 500;
+    font-size: 14px;
+    color: #fff;
+    background: transparent;
+    transition: background 0.2s ease;
+  }
+  .nav__cta:hover { background: var(--blue); }
+
+  @media (max-width: 720px) {
+    .nav__links { display: none; }
+  }
+
+  /* ── Hero ────────────────────────────────────────── */
+  .hero {
+    padding: 64px 40px 96px;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  .hero__content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 560px;
+  }
+
+  .hero__title {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 37px;
+    line-height: 1.2;
+    color: var(--text-faint);
+  }
+
+  .hero__subtitle {
+    font-family: var(--font-display);
+    font-weight: 500;
+    font-size: 16px;
+    color: var(--text-faint);
+  }
+
+  .hero__cta {
+    margin-top: 8px;
+    align-self: flex-start;
+    background: var(--blue);
+    border-radius: 999px;
+    padding: 12px 24px;
+    font-family: var(--font-display);
+    font-weight: 500;
+    font-size: 15px;
+    color: #fff;
+    transition: background 0.2s ease;
+  }
+  .hero__cta:hover { background: #0069d9; }
+
+  /* ── Product showcase ───────────────────────────── */
+  .showcase {
+    padding: 64px 40px;
+    max-width: 1400px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .showcase__carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 48px;
+  }
+
+  .showcase__arrow {
+    flex-shrink: 0;
+    width: 44px;
+    height: 44px;
+    border-radius: 999px;
+    background: var(--blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    transition: transform 0.2s ease;
+  }
+  .showcase__arrow:hover { transform: scale(1.08); }
+  .showcase__arrow svg { width: 18px; height: 18px; }
+
+  .showcase__image-frame {
+    width: 100%;
+    max-width: 640px;
+    aspect-ratio: 16 / 9;
+    border-radius: 16px;
+    background: linear-gradient(160deg, #1a1c1e, #0d0e0f);
+    border: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-fainter);
+    font-family: var(--font-mono);
+    font-size: 13px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  .showcase__name {
+    margin-top: 32px;
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 24px;
+    color: var(--text-faint);
+  }
+
+  .showcase__desc {
+    margin: 12px auto 0;
+    max-width: 640px;
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--text-fainter);
+  }
+
+  .showcase__buy {
+    margin-top: 32px;
+    background: var(--blue);
+    border-radius: 6px;
+    padding: 12px 32px;
+    font-family: var(--font-display);
+    font-weight: 500;
+    font-size: 14px;
+    color: #fff;
+    transition: background 0.2s ease;
+  }
+  .showcase__buy:hover { background: #0069d9; }
+
+  /* ── Mission statement (testimonial-style headline) ─ */
+  .mission {
+    padding: 96px 40px 64px;
+    max-width: 1400px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .mission__eyebrow {
+    font-family: var(--font-display);
+    font-weight: 500;
+    font-size: 20px;
+    color: #fff;
+  }
+
+  .mission__heading {
+    margin-top: 12px;
+    font-family: var(--font-display);
+    font-weight: 900;
+    font-size: 48px;
+    line-height: 1.2;
+    color: #fff;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .mission__body {
+    margin-top: 16px;
+    max-width: 760px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: var(--font-display);
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.5;
+    color: #71717a;
+  }
+
+  @media (max-width: 640px) {
+    .mission__heading { font-size: 34px; }
+  }
+
+  /* ── Secondary CTA (illustrated) ─────────────────── */
+  .cta-illustrated {
+    padding: 40px 40px 96px;
+  }
+
+  .cta-illustrated__panel {
+    max-width: 1312px;
+    margin: 0 auto;
+    position: relative;
+    border-radius: 24px;
+    background: linear-gradient(135deg, #0d47a1, #1565c0 45%, #0d47a1);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+    padding: 56px 64px;
+  }
+
+  .cta-illustrated__panel::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(circle at 15% 20%, rgba(255,255,255,0.12), transparent 40%),
+      radial-gradient(circle at 85% 80%, rgba(255,255,255,0.1), transparent 45%);
+  }
+
+  .cta-illustrated__content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    max-width: 560px;
+  }
+
+  .cta-illustrated__heading {
+    font-family: var(--font-display);
+    font-weight: 900;
+    font-size: 40px;
+    line-height: 1.25;
+    color: #fff;
+  }
+
+  .cta-illustrated__btn {
+    align-self: flex-start;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: #fff;
+    border-radius: 12px;
+    padding: 16px 24px;
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 16px;
+    color: #000;
+    transition: transform 0.2s ease;
+  }
+  .cta-illustrated__btn:hover { transform: translateX(4px); }
+
+  .cta-illustrated__btn svg { width: 18px; height: 18px; }
+
+  .cta-illustrated__art {
+    position: relative;
+    z-index: 1;
+    flex-shrink: 0;
+    width: 320px;
+    height: 220px;
+    border-radius: 16px;
+    background: linear-gradient(155deg, rgba(255,255,255,0.18), rgba(255,255,255,0.04));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255,255,255,0.6);
+    font-family: var(--font-mono);
+    font-size: 12px;
+    text-align: center;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  @media (max-width: 800px) {
+    .cta-illustrated__panel { flex-direction: column; padding: 40px 32px; }
+    .cta-illustrated__art { width: 100%; }
+  }
+
+  /* ── Field applications ─────────────────────────── */
+  .applications {
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    padding: 80px 40px;
+  }
+
+  .applications__grid {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+
+  @media (max-width: 900px) {
+    .applications__grid { grid-template-columns: 1fr; }
+  }
+
+  .applications__card {
+    position: relative;
+    border-radius: 16px;
+    border: 1px solid #3c494d;
+    overflow: hidden;
+    box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25);
+    aspect-ratio: 1.12 / 1;
+    background: linear-gradient(155deg, #14181a, #0a0b0c 60%, #0d0e0f);
+  }
+
+  .applications__card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0) 50%);
+  }
+
+  .applications__card-caption {
+    position: absolute;
+    left: 24px;
+    right: 24px;
+    bottom: 24px;
+    z-index: 1;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 16px;
+  }
+
+  .applications__card-label {
+    font-family: var(--font-mono);
+    font-size: 16px;
+    color: var(--cyan);
+    text-transform: uppercase;
+  }
+
+  .applications__card-title {
+    font-family: var(--font-body);
+    font-size: 16px;
+    color: var(--text-heading);
+    margin-top: 4px;
+  }
+
+  .applications__card-dataset {
+    font-family: var(--font-mono);
+    font-size: 14px;
+    color: var(--text-fainter);
+    white-space: nowrap;
+  }
+
+  .applications__copy {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .applications__eyebrow {
+    font-family: var(--font-mono);
+    font-size: 16px;
+    color: var(--cyan);
+  }
+
+  .applications__heading {
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 1.17;
+    letter-spacing: -0.02em;
+    color: var(--text-heading);
+  }
+
+  .applications__body {
+    padding-top: 8px;
+    font-size: 18px;
+    line-height: 1.55;
+    color: var(--text-body);
+  }
+
+  .applications__list {
+    list-style: none;
+    padding-top: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .applications__list li {
+    display: flex;
+    gap: 16px;
+  }
+
+  .applications__marker {
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    margin-top: 2px;
+    border-radius: 999px;
+    background: var(--cyan);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .applications__marker svg { width: 12px; height: 12px; color: #0d0e0f; }
+
+  .applications__list-title {
+    font-weight: 700;
+    color: var(--text-heading);
+    font-size: 16px;
+  }
+
+  .applications__list-text {
+    color: var(--text-body);
+    font-size: 16px;
+  }
+
+  /* ── CTA section ─────────────────────────────────── */
+  .cta {
+    padding: 96px 40px;
+  }
+
+  .cta__inner {
+    max-width: 768px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    text-align: center;
+  }
+
+  .cta__heading {
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 1.17;
+    letter-spacing: -0.02em;
+    color: var(--text-heading);
+  }
+
+  .cta__heading span {
+    font-weight: 400;
+    color: var(--cyan);
+  }
+
+  .cta__body {
+    color: var(--text-body);
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .cta__actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+    padding-top: 8px;
+  }
+
+  .cta__primary {
+    background: var(--cyan-bright);
+    border-radius: 4px;
+    padding: 17px 40px;
+    font-weight: 700;
+    font-size: 16px;
+    color: #005a6c;
+    transition: background 0.2s ease;
+  }
+  .cta__primary:hover { background: #33e0ff; }
+
+  .cta__secondary {
+    background: rgba(13,14,15,0.4);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--cyan);
+    border-radius: 4px;
+    padding: 17px 40px;
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--cyan);
+    transition: background 0.2s ease;
+  }
+  .cta__secondary:hover { background: rgba(174,236,255,0.1); }
+
+  /* ── Footer ──────────────────────────────────────── */
+  .footer {
+    border-top: 1px solid var(--border);
+    padding: 64px 40px;
+  }
+
+  .footer__columns {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 80px;
+    font-family: var(--font-display);
+  }
+
+  .footer__column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .footer__column-title {
+    font-weight: 500;
+    font-size: 14px;
+    color: var(--blue);
+  }
+
+  .footer__column a {
+    font-size: 16px;
+    color: var(--text-faint);
+    transition: color 0.2s ease;
+  }
+  .footer__column a:hover { color: #fff; }
+
+  /* Reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    * { transition: none !important; scroll-behavior: auto !important; }
+  }
+</style>
+</head>
+<body>
+
+  <!-- Nav -->
+  <header class="nav">
+    <div class="nav__logo">SKYPILOT</div>
+    <nav class="nav__links">
+      <a href="#home">Home</a>
+      <a href="about-us.html">About Us</a>
+      <a href="#fly">Fly Now</a>
+    </nav>
+    <a class="nav__cta" href="about-us.html#contact">Contact us</a>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="home">
+    <div class="hero__content">
+      <h1 class="hero__title">Redefine the Sky with SkyPilot</h1>
+      <p class="hero__subtitle">Explore our AI-powered drones for photography, delivery, and more.</p>
+      <button class="hero__cta">Explore Drones</button>
+    </div>
+  </section>
+
+  <!-- Product showcase -->
+  <section class="showcase" id="fly">
+    <div class="showcase__carousel">
+      <button class="showcase__arrow" aria-label="Previous drone">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+      </button>
+
+      <div class="showcase__image-frame">DJI Mavic 2 — product render</div>
+
+      <button class="showcase__arrow" aria-label="Next drone">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+      </button>
+    </div>
+
+    <h2 class="showcase__name">DJI MAVIC 2</h2>
+    <p class="showcase__desc">
+      Unlock cinematic excellence with the Drone&#8209;1. Engineered for unmatched stability,
+      rugged performance, and ultra-clear 4K visuals — every flight captures perfection.
+    </p>
+    <button class="showcase__buy">Buy Now</button>
+  </section>
+
+  <!-- Mission statement -->
+  <section class="mission">
+    <p class="mission__eyebrow">Transforming How You See the World</p>
+    <h2 class="mission__heading">Engineering the Future of the Skies</h2>
+    <p class="mission__body">
+      Experience the power of smart drone technology built for every purpose.
+      Handle inspections and industrial tasks more efficiently.
+      Capture stunning cinematic shots with ease.
+    </p>
+  </section>
+
+  <!-- Field applications -->
+  <section class="applications" id="about">
+    <div class="applications__grid">
+      <div class="applications__card">
+        <div class="applications__card-caption">
+          <div>
+            <p class="applications__card-label">Live Feed</p>
+            <p class="applications__card-title">Territorial Mapping</p>
+          </div>
+          <p class="applications__card-dataset">DATASET: V-LIDAR_A7</p>
+        </div>
+      </div>
+
+      <div class="applications__copy">
+        <p class="applications__eyebrow">FIELD APPLICATIONS</p>
+        <h2 class="applications__heading">Infrastructure<br>Digital Twins</h2>
+        <p class="applications__body">
+          We leverage our sensor fusion research to create high-fidelity digital twins of
+          critical infrastructure. Our drones can survey complex bridges, power grids, and
+          skyscrapers in a fraction of the time required by traditional methods.
+        </p>
+        <ul class="applications__list">
+          <li>
+            <span class="applications__marker">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            </span>
+            <p>
+              <span class="applications__list-title">Automated Fault Detection</span><br>
+              <span class="applications__list-text">AI identifies microscopic cracks and structural stress using thermal anomalies.</span>
+            </p>
+          </li>
+          <li>
+            <span class="applications__marker">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            </span>
+            <p>
+              <span class="applications__list-title">Sub-Centimeter Accuracy</span><br>
+              <span class="applications__list-text">Georeferenced data with RTK-GNSS positioning for professional engineering audits.</span>
+            </p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta" id="contact">
+    <div class="cta__inner">
+      <h2 class="cta__heading">Partner with the <span>Apex of Innovation</span></h2>
+      <p class="cta__body">
+        Join our research consortium or request a private demonstration of our upcoming
+        stealth-mode hardware at our headquarters.
+      </p>
+      <div class="cta__actions">
+        <button class="cta__primary">Request Access</button>
+        <button class="cta__secondary">Contact Research Team</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Secondary CTA (illustrated) -->
+  <section class="cta-illustrated">
+    <div class="cta-illustrated__panel">
+      <div class="cta-illustrated__content">
+        <h2 class="cta-illustrated__heading">Navigate Smarter, Unlock the Skies.</h2>
+        <button class="cta-illustrated__btn">
+          Go &amp; Get it!
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </button>
+      </div>
+      <div class="cta-illustrated__art">Drone illustration</div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer__columns">
+      <div class="footer__column">
+        <p class="footer__column-title">Resources</p>
+        <a href="#">User Guides</a>
+        <a href="#">FAQs</a>
+        <a href="#">Blog</a>
+        <a href="#">Support</a>
+      </div>
+      <div class="footer__column">
+        <p class="footer__column-title">Company</p>
+        <a href="#">About Us</a>
+        <a href="#">Our Mission</a>
+        <a href="#">Careers</a>
+      </div>
+      <div class="footer__column">
+        <p class="footer__column-title">Connect</p>
+        <a href="#">Twitter</a>
+        <a href="#">Instagram</a>
+        <a href="#">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
